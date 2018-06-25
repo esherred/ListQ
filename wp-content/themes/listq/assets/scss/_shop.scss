@@ -1,0 +1,216 @@
+/*
+    Shop
+*/
+.shop{
+    .set-pd-bottom{
+        > *{
+            margin-bottom: 45px;
+        }
+    }
+}
+/*
+    Shop Detail
+*/
+.shop-detail{
+    .box-detail{
+        padding: 30px;
+        background: $text-white;
+        .box-product-detail{
+            li{
+                
+                outline: none;
+                .box-img, .box-thumbanil{
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    background: #f3f3f1;
+                }
+            }
+            .slick-big-images{
+                margin-bottom: 10px;
+                img{
+                    width: 100%;
+                }
+            }
+            .slick-thumbnail-images{
+                margin-left: -10px;
+                li{
+                    padding-left: 10px;
+                    &.slick-current{
+                        .box-thumbanil{
+                            border: none;
+                        }
+                    }
+                    .box-thumbanil{
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .box-detail-content{
+            h3{
+                font-size: 36px;
+                line-height: 36px;
+                @include font-regular();
+                color: $text-444;
+                i{
+                    vertical-align: super;
+                    font-size: 18px;
+                    @include font-light();
+                }
+                span{
+                    font-size: 14px;
+                    @include font-light();
+                }
+            }
+            .blox-flex{
+                margin-top: 15px;
+                margin-bottom: 25px;
+                display: flex;
+                .listq-button{
+                    .button{
+                        @include font-light();
+                        &:hover{
+                            color: $text-222;
+                        }
+                        span{
+                            padding-right: 7px;
+                        }
+                    }
+                }
+                .box-qty{
+                    display: inline-block;
+                    margin-left: 10px;
+                    position: relative;
+                    .button{
+                        background: #f8f8f8;
+                        width: 15px;
+                        height: 35px;
+                        position: absolute;
+                        top: 50%;
+                        right: 4px;
+                        @include translate-y(-50%);
+                    }
+                    button{
+                        background: transparent;
+                        outline: none;
+                        border: none;
+                        font-size: 14px;
+                        @include font-regular();
+                        color: rgba(#000, .5);
+                        line-height: 5px;
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        @include translate-x(-50%);
+                        cursor: pointer;
+                        &:hover{
+                            color: rgba($text-444, 1);
+                        }
+                        &.qty-minus{
+                            top: 6px;
+                        }
+                        &.qty-plus{
+                            bottom: 11px;
+                        }
+                        span{
+                            display: block;
+                            line-height: 8px;
+                        }
+                    }
+                    input{
+                        height: 42px;
+                        width: 42px;
+                        border-radius: 5px;
+                        line-height: 42px;
+                        text-align: center;
+                        border: 1px solid #cccccc;
+                        padding-right: 17px;
+                        background: transparent;
+                        font-size: 14px;
+                        @include font-regular();
+                        color: #999999;
+                    }
+                }
+            }
+            p{
+                font-size: 14px;
+                color: $text-444;
+                @include font-light();
+            }
+            ol{
+                margin: 15px 0;
+                li{
+                    p{
+                        span{
+                            padding-right: 8px;
+                            color: #999999;
+                        }
+                        a{
+                            display: inline-block;
+                            font-size: 14px;
+                            color: $text-444;;
+                            @include font-light();
+                            transition: all .3s ease;
+                            &:hover{
+                                color: $primary-color-home-v1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .box-review{
+            margin-top: 50px;
+            .tab-menu{
+                ul{
+                    border-bottom: 1px solid #e5e5e5;
+                    display: flex;
+                    li{
+                        padding: 0 15px;
+                        &:hover{
+                            a{
+                                color: $text-222;
+                            }
+                        }
+                        &.active{
+                            a{
+                                color: $text-222;
+                                border-bottom: 1px solid $primary-color-home-v1;
+                            }
+                        }
+                        &:first-child{
+                            padding-left: 0;
+                        } 
+                        &:last-child{
+                            padding-right: 0;
+                        } 
+                        a{
+                            font-size: 14px;
+                            color: #999999;
+                            @include font-medium();
+                            line-height: 40px;
+                            display: block;
+                            margin-bottom: -1px;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+            }
+            .tab-content{
+                margin-top: 50px;
+                .add-comment{
+                    h3{
+                        padding-bottom: 25px;
+                        font-size: 24px;
+                        color: $text-222;
+                        @include font-bold();
+                    }
+                }
+            }
+        }
+    }
+}

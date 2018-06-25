@@ -1,0 +1,68 @@
+/*
+    Listing Detail
+*/
+.listing-detail{
+    .content-listing{
+        .box{
+            margin-bottom: 40px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            > [class*=box-]{
+                padding: 30px;
+                background: $text-white;
+            }
+            h3{
+                padding-bottom: 25px;
+                text-transform: uppercase;
+                @include font-bold();
+                font-size: 24px;
+                color: $text-333;
+            }
+        }
+        .box-contact{
+            .contact-info{
+                li{
+                    p{
+                        @include font-bold();
+                        font-size: 14px;
+                        color: $text-333;
+                        line-height: 40px;
+                        i{
+                            display: inline-block;
+                            min-width: 100px;
+                            padding-right: 30px;
+                        }
+                        span, a{
+                            @include font-light();
+                            color: $text-444;
+                        }
+                    }
+                }
+            }
+        }
+        .box-description{
+            p{
+                @include font-light();
+                font-size: 14px;
+                color: $text-444;
+                padding-bottom: 15px;
+            }
+        }
+        .listq-image-fullwidth{
+            position: relative;
+            a{
+                font-size: 50px;
+                color: $text-white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate-xy(-50%, -50%);
+                transition: all .3s ease;
+                &:hover{
+                    color: $primary-color-home-v1;
+                }
+            }
+        }
+    }
+}

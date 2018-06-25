@@ -1,0 +1,173 @@
+/*
+Search
+*/
+.listq-search-v4{
+    background: transparent;
+    form{
+        .km-filter{
+            .km_filter{
+                background: $text-white;
+                .ui-slider-handle{
+                    background: $text-333;
+                    &:before{
+                        background: $text-white;
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+    Blog
+*/
+.blog-v4{
+    @extend .blog-v3;
+    &.listq-set-pd{
+        padding-bottom: 120px;
+    }
+    .row{
+        display: flex;
+        > *{
+            height: 100%;
+        }
+    }
+    li{
+        margin-bottom: 0;
+        &:nth-child(odd){
+            .box{
+                .content{
+                    &:before{
+                        border-bottom: 16px solid #f8f8f8;
+                        bottom: 100%;
+                    }
+                }
+            }
+        }
+        &:nth-child(even){
+            .box{
+                position: relative;
+                .content{
+                    &:before{
+                        border-top: 16px solid #f8f8f8;
+                        top: 100%;
+                    }
+                }
+                .listq-image-hvr-shin{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
+            }
+        }
+        .box{
+            height: 100%;
+            .content{
+                position: relative;
+                background: #f8f8f8;
+                padding: 35px 40px;
+                &:before{
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-left: 14px solid transparent;
+                    border-right: 14px solid transparent;
+                    position: absolute;
+                    left: 38px;
+                }
+                .day{
+                    margin-bottom: 24px;
+                }
+                h3{
+                    &:hover{
+                        color: $primary-color-home-v4;
+                    }
+                }
+                .categories{
+                    &:hover{
+                        color: $primary-color-home-v4;
+                    }
+                }
+                .read-more{
+                    &:hover{
+                        color: $primary-color-home-v4;
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+    Recent Place
+*/
+.recent-place-v3{
+    background: url('../images/index-4/bg-recent-place.jpg');
+    @include background-parallax();
+    .listq-title{
+        p, h3{
+            color: $text-white;
+        }
+    }
+    .box{
+        background: $text-white;
+        .listq-image-fullwidth{
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            overflow: hidden;
+        }
+        .content{
+            .listq-button{
+                .button{
+                    margin-top: 52px;
+                    border: 1px solid $primary-color-home-v4;
+                    background: $primary-color-home-v4;
+                    &:hover{
+                        background: transparent;
+                        color: $text-222;
+                    }
+                }
+            }
+            h3{
+                &:hover{
+                    color: $primary-color-home-v4;
+                }
+            }
+            .rating{
+                li{
+                    color: $primary-color-home-v4;
+                }
+            }
+        }
+    }
+}
+/*
+    Clients
+*/
+.clients-v2{
+    .client{
+        .text{
+            h3{
+                color: $primary-color-home-v4;
+            }
+        }
+    }
+}
+/*
+    Pricing
+*/
+.pricing-v2{
+    li{
+        .box{
+            .listq-button{
+                .button{
+                    border: 1px solid $text-white;
+                    background: $text-white;
+                    &:hover{
+                        background: $primary-color-home-v4;
+                        border: 1px solid $primary-color-home-v4;
+                        color: $text-white;
+                    }
+                }
+            }
+        }
+    }
+}

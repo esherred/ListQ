@@ -1,0 +1,833 @@
+/*
+    Stricky
+*/
+.stricky-fixed{
+    box-shadow: 0 0 15px rgba(#000000, .2);
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+/*
+    Bars
+*/
+.bars{
+    display: none;
+    float: right;
+    width: 20px;
+    height: 16px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    @include rotate(0);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: all .3s ease;
+    cursor: pointer;
+    &.open{
+        span{
+            &:nth-child(1){
+                width: 100%;
+                left: 0;
+            }
+            &:nth-child(2){
+                @include rotate(0);
+            }
+            &:nth-child(3){
+                @include rotate(0);
+            }
+            &:nth-child(4){
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    span{
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        opacity: 1;
+        left: 0;
+        @include rotate(0);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -ms-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+        &:nth-child(1){
+            top: 0;
+            width: 0%;
+            left: 50%;
+        }
+        &:nth-child(2){
+            top: 7px;
+            @include rotate(45deg);
+        }
+        &:nth-child(3){
+            top: 7px;
+            @include rotate(-45deg);
+        }
+        &:nth-child(4){
+            top: 14px;
+            width: 0%;
+            left: 50%;
+        }
+    }
+}
+/*
+    Mobile Menu
+*/
+.mobile-menu{
+    background: $text-white;
+    max-height: 200px;
+    overflow: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0px 6px 10px rgba(#000000, .1); 
+    .nav-holder{
+        > ul{
+            > li{
+                border-top: 1px solid #f4f4f4;
+                > a{
+                    background: $text-white;
+                    display: block;
+                    color: $text-222;
+                    padding: 0 15px;
+                    font-size: 14px;
+                    line-height: 42px;
+                    transition: all .3s ease;
+                    @include font-medium();
+                    button{
+                        border: none;
+                        color: $text-222;
+                        background: $text-white;
+                        position: absolute;
+                        right: 15px;
+                        width: 15px;
+                        height: auto;
+                        cursor: pointer;
+                        z-index: 1000;
+                        transition: all .3s ease;
+                        &:focus{
+                            outline: none;
+                        }
+                        span{
+                            font-size: 10px;
+                        }
+                    }
+                }
+                ul.submenu{
+                    background: #f8f8f8;
+                    display: none;
+                    li{
+                        display: block;
+                        border-top: 1px solid #f2f2f2;
+                        > a{
+                            display: block;
+                            line-height: 42px;
+                            padding: 0 40px;
+                            color: $text-222;
+                            @include font-medium();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+    Header
+*/
+.header{
+    padding: 0 70px;
+    &.stricky-fixed{
+        .logo{
+            height: 66px;
+        }
+        .main-menu{
+            .menu{
+                li{
+                    a{
+                        height: 66px;
+                        line-height: 66px;
+                    }
+                }
+            }
+        }
+    }
+    &.header-v1{
+        position: relative;
+        background: $text-white;
+        .mobile-menu{
+            .nav-holder{
+                > ul{
+                    > li{
+                        &:hover, &.active{
+                            > a{
+                                color: $primary-color-home-v1;
+                                button{
+                                    color: $primary-color-home-v1;
+                                }
+                            }
+                        }
+                        ul.submenu{
+                            li{
+                                &:hover{
+                                    > a{
+                                        color: $primary-color-home-v1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bars{
+            &:hover{
+                span{
+                    background: $primary-color-home-v1;
+                }
+            }
+            span{
+                background: $text-222;
+            }
+        }
+        .add-your-listing{
+            .listq-button{
+                .button{
+                    &:hover{
+                        color: $text-222;
+                    }
+                }
+            }
+            li{
+                &:before{
+                    color: $text-333;
+                }
+                &:hover{
+                    a{
+                        color: $primary-color-home-v1;
+                    }
+                }
+                a{
+                    color: $text-333;
+                }
+            }
+        }
+        .main-menu{
+            .menu{
+                li{
+                    &:hover, &.active{
+                        > a{
+                            color: $primary-color-home-v1;
+                        }
+                    }
+                    a{
+                        color: $text-444;
+                    }
+                    .sub-menu{
+                        border-top: 3px solid $primary-color-home-v1;
+                        background: $text-white;
+                        li{
+                            a{
+                                &:hover{
+                                    color: $text-444;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-v2{
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: transparent;
+        &.stricky-fixed{
+            background: rgba(#000000, .8);
+        }
+        .mobile-menu{
+            .nav-holder{
+                > ul{
+                    > li{
+                        &:hover, &.active{
+                            > a{
+                                color: $primary-color-home-v2;
+                                button{
+                                    color: $primary-color-home-v2;
+                                }
+                            }
+                        }
+                        ul.submenu{
+                            li{
+                                &:hover{
+                                    > a{
+                                        color: $primary-color-home-v2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bars{
+            &:hover{
+                span{
+                    background: $primary-color-home-v2;
+                }
+            }
+            span{
+                background: $text-white;
+            }
+        }
+        .add-your-listing{
+            .listq-button{
+                .button{
+                    color: $text-222;
+                    &:hover{
+                        color: $text-white;
+                    }
+                }
+            }
+            li{
+                &:before{
+                    color: $text-white;
+                }
+                &:hover{
+                    a{
+                        color: $primary-color-home-v2;
+                    }
+                }
+                a{
+                    color: $text-white;
+                }
+            }
+        }
+        .main-menu{
+            .menu{
+                li{
+                    &:hover, &.active{
+                        > a{
+                            color: $primary-color-home-v2;
+                        }
+                    }
+                    a{
+                        color: $text-white;
+                    }
+                    .sub-menu{
+                        border-top: 3px solid $primary-color-home-v2;
+                        background: $text-white;
+                        li{
+                            a{
+                                color: $text-444;
+                                &:hover{
+                                    color: $text-444;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-v3{
+        position: relative;
+        background: $text-white;
+        .mobile-menu{
+            .nav-holder{
+                > ul{
+                    > li{
+                        &:hover, &.active{
+                            > a{
+                                color: $primary-color-home-v3;
+                                button{
+                                    color: $primary-color-home-v3;
+                                }
+                            }
+                        }
+                        ul.submenu{
+                            li{
+                                &:hover{
+                                    > a{
+                                        color: $primary-color-home-v3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bars{
+            &:hover{
+                span{
+                    background: $primary-color-home-v3;
+                }
+            }
+            span{
+                background: $text-222;
+            }
+        }
+        .add-your-listing{
+            .listq-button{
+                .button{
+                    &:hover{
+                        color: $text-222;
+                    }
+                }
+            }
+            li{
+                &:before{
+                    color: $text-333;
+                }
+                &:hover{
+                    a{
+                        color: $primary-color-home-v3;
+                    }
+                }
+                a{
+                    color: $text-333;
+                }
+            }
+        }
+        .main-menu{
+            .menu{
+                li{
+                    &:hover, &.active{
+                        > a{
+                            background: $primary-color-home-v3;
+                            color: $text-white;
+                        }
+                    }
+                    a{
+                        color: $text-444;
+                    }
+                    .sub-menu{
+                        border-top: 3px solid $primary-color-home-v3;
+                        background: $text-white;
+                        li{
+                            a{
+                                &:hover{
+                                    color: $text-444;
+                                    background: $text-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-v4{
+        position: relative;
+        background: $text-white;
+        .float-left{
+            float: left;
+        }
+        .float-right{
+            float: right;
+            display: flex;
+            align-items: center;
+        }
+        .mobile-menu{
+            .nav-holder{
+                > ul{
+                    > li{
+                        &:hover, &.active{
+                            > a{
+                                color: $primary-color-home-v4;
+                                button{
+                                    color: $primary-color-home-v4;
+                                }
+                            }
+                        }
+                        ul.submenu{
+                            li{
+                                &:hover{
+                                    > a{
+                                        color: $primary-color-home-v4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bars{
+            &:hover{
+                span{
+                    background: $primary-color-home-v4;
+                }
+            }
+            span{
+                background: $text-222;
+            }
+        }
+        .add-your-listing{
+            position: static;
+            @include translate-y(0);
+            .listq-button{
+                .button{
+                    &:hover{
+                        color: $text-222;
+                    }
+                }
+            }
+            li{
+                &:before{
+                    color: $text-333;
+                }
+                &:hover{
+                    a{
+                        color: $primary-color-home-v4;
+                    }
+                }
+                a{
+                    color: $text-333;
+                }
+            }
+        }
+        .main-menu{
+            padding-right: 30px;
+            float: none;
+            position: static;
+            .menu{
+                li{
+                    &:hover, &.active{
+                        > a{
+                            color: $primary-color-home-v4;
+                        }
+                    }
+                    a{
+                        color: $text-444;
+                    }
+                    .sub-menu{
+                        border-top: 3px solid $primary-color-home-v4;
+                        background: $text-white;
+                        li{
+                            a{
+                                &:hover{
+                                    color: $text-444;
+                                    background: $text-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-v5{
+        @extend .header-v4;
+        z-index: 1000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: transparent;
+        &.stricky-fixed{
+            background: rgba(#000000, .8);
+        }
+        .mobile-menu{
+            .nav-holder{
+                > ul{
+                    > li{
+                        &:hover, &.active{
+                            > a{
+                                color: $primary-color-home-v5;
+                                button{
+                                    color: $primary-color-home-v5;
+                                }
+                            }
+                        }
+                        ul.submenu{
+                            li{
+                                &:hover{
+                                    > a{
+                                        color: $primary-color-home-v5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bars{
+            &:hover{
+                span{
+                    background: $primary-color-home-v5;
+                }
+            }
+            span{
+                background: $text-white;
+            }
+        }
+        .add-your-listing{
+            .listq-button{
+                .button-home-five{
+                    &:hover{
+                        color: $text-white;
+                        background: transparent;
+                    }
+                }
+            }
+            li{
+                &:before{
+                    color: $text-white;
+                }
+                &:hover{
+                    a{
+                        color: $primary-color-home-v5;
+                    }
+                }
+                a{
+                    color: $text-white;
+                }
+            }
+        }
+        .main-menu{
+            .menu{
+                li{
+                    &:hover, &.active{
+                        > a{
+                            color: $primary-color-home-v5;
+                        }
+                    }
+                    a{
+                        color: $text-white;
+                    }
+                    .sub-menu{
+                        border-top: 3px solid $primary-color-home-v5;
+                        li{
+                            a{
+                                color: $text-444;
+                                &:hover{
+                                    color: $text-444;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.header-v6{
+        position: relative;
+        background: $primary-color-home-v6;;
+        .mobile-menu{
+            .nav-holder{
+                > ul{
+                    > li{
+                        &:hover, &.active{
+                            > a{
+                                color: $primary-color-home-v6;
+                                button{
+                                    color: $primary-color-home-v6;
+                                }
+                            }
+                        }
+                        ul.submenu{
+                            li{
+                                &:hover{
+                                    > a{
+                                        color: $primary-color-home-v6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bars{
+            &:hover{
+                span{
+                    background: $text-222;
+                }
+            }
+            span{
+                background: $text-white;
+            }
+        }
+        .add-your-listing{
+            .listq-button{
+                .button{
+                    border: 1px solid $text-444;
+                    background: $text-444;
+                    &:hover{
+                        border: 1px solid $text-white;
+                        background: $text-white;
+                        color: $text-222;
+                    }
+                }
+            }
+            li{
+                &:before{
+                    color: $text-white;
+                }
+                &:hover{
+                    a{
+                        color: $text-444;
+                    }
+                }
+                a{
+                    color: $text-white;
+                }
+            }
+        }
+        .main-menu{
+            .menu{
+                li{
+                    &:hover, &.active{
+                        > a{
+                            background: $text-white;
+                            color: $primary-color-home-v6;
+                        }
+                    }
+                    a{
+                        color: $text-white;
+                    }
+                    .sub-menu{
+                        border-top: 3px solid $text-white;
+                        background: $text-white;
+                        li{
+                            a{
+                                color: $text-222;
+                                &:hover{
+                                    color: $text-222;
+                                    background: $text-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        height: 100px;
+        float: left;
+    }
+    .add-your-listing{
+        float: right;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 70px;
+        top: 50%;
+        @include translate-y(-50%);
+        li{
+            display: inline-block;
+            padding-right: 10px;
+            position: relative;
+            &:before{
+                content: '/';
+                font-size: 14px;
+                @include font-light();
+                position: absolute;
+                right: 1px;
+                top: 0;
+            }
+            &:last-child, &:nth-last-child(2){
+                padding-right: 0;
+                &:before{
+                    display: none;
+                }
+            }
+            &:last-child{
+                display: none;
+            }
+            a{
+                font-size: 14px;
+                @include font-light();
+                transition: all .5s ease;
+            }
+        }
+        .listq-button{
+            margin-left: 28px;
+            a{
+                span{
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+    .main-menu{
+        float: left;
+        position: relative;
+        left: 13%;
+        .menu{
+            display: flex;
+            align-items: center;
+            li{
+                position: relative;
+                &:hover{
+                    &:hover{
+                        .sub-menu{
+                            visibility: visible;
+                            opacity: 1;
+                            z-index: 1000;
+                            transition: all .5s ease;
+                            @include scale(1);
+                        }
+                    }
+                }
+                a{
+                    display: inline-block;
+                    padding: 0 20px;
+                    height: 100px;
+                    line-height: 100px;
+                    font-size: 14px;
+                    @include font-medium();
+                    transition: all .5s ease;
+                    span{
+                        font-size: 16px;
+                        padding-left: 8px;
+                    }
+                }
+                .sub-menu{
+                    width: 250px;
+                    padding: 15px 0;
+                    box-shadow: 0 9px 15px rgba(#000000, .2);
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    z-index: -1;
+                    @include scale(0);
+                    li{
+                        display: block;
+                        a{
+                            height: 40px;
+                            line-height: 40px;
+                            transition: all .5s ease;
+                            &:hover{
+                                padding-left: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

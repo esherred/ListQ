@@ -1,0 +1,44 @@
+/*
+    Contact
+*/
+.contact{
+    .box{
+        padding: 30px;
+        background: $text-white;
+        p{
+            padding-bottom: 10px;
+            font-size: 14px;
+            color: $text-444;
+            @include font-light();
+            &.no-padding{
+                padding-bottom: 0;
+            }
+            strong{
+                @include font-bold();
+            }
+        }
+        .box-contact-info{
+            padding-top: 25px;
+            p{
+                @include font-medium();
+                a{
+                    font-size: 14px;
+                    color: $text-444;
+                    @include font-light();
+                }
+            }
+        }
+        .listq-form{
+            .listq-button{
+                .btn-reset{
+                    margin-left: 6px;
+                    background: $text-222;
+                    border: 1px solid $text-222;
+                    &:hover{
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+/*
+    About
+*/
+.about{
+    .box{
+        padding: 30px;
+        background: $text-white;
+        h3{
+            padding-bottom: 37px;
+            font-size: 24px;
+            color: $text-333;
+            @include font-bold();
+        }
+        .listq-image-fullwidth{
+            border-radius: 5px;
+        }
+        .content{
+            p{
+                font-size: 14px;
+                color: #4e5453;
+                @include font-light();
+                strong{
+                    display: block;
+                    padding-bottom: 10px;
+                    @include font-bold();
+                }
+            }
+        }
+    }
+}

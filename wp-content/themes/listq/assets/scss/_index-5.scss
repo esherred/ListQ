@@ -1,0 +1,237 @@
+/*
+    Search
+*/
+.listq-search-v5{
+    padding: 0;
+    form{
+        display: block;
+        .position-relative{
+            width: 100%;
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+        .km-filter{
+            margin: 75px 0 0 0;
+            width: 100%;
+            .km_filter{
+                background: $primary-color-home-v5;
+                .ui-slider-handle{
+                    background: $text-333;
+                    &:before{
+                        background: $text-white;
+                    }
+                }
+            }
+        }
+        .listq-button{
+            .button{
+                color: $text-333;
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 35px;
+            }
+        }
+    }
+}
+/*
+    Slider
+*/
+.slider-v3{
+    .banner-caption-box{
+        .box{
+            background: rgba(#000000, .8);
+            padding: 60px 70px;
+            h3{
+                padding-bottom: 30px;
+                font-size: 48px;
+                line-height: 55px;
+                color: $primary-color-home-v5;
+                text-transform: uppercase;
+                @include font-bold();
+            }
+            p{
+                padding-bottom: 20px;
+                font-size: 20px;
+                line-height: 26px;
+                letter-spacing: 0;
+                color: $text-white;
+                @include font-light();
+            }
+            a{
+                display: inline-block;
+                padding: 0 35px;
+                letter-spacing: 0;
+                font-size: 14px !important;
+                color: $text-white;
+                @include font-light;
+                border: 1px solid $primary-color-home-v5;
+                border-width: 1px !important;
+                line-height: 42px !important;
+                &:hover{
+                    background: $primary-color-home-v5;
+                }
+                span{
+                    padding-left: 12px;
+                    font-size: 14px !important;
+                }
+            }
+        }
+    }
+}
+/*
+    Highlight Shop
+*/
+.highlight-shop{
+    .box-find{
+        margin-top: -200px;
+        h3{
+            text-align: center;
+            font-size: 24px;
+            color: $text-333;
+            @include font-bold();
+            line-height: 80px;
+            background: $primary-color-home-v5;
+        }
+        .content{
+            background: #f5f5f5;
+            padding: 30px;
+            padding-bottom: 70px;
+            .clear{
+                float: right;
+                margin-top: 17px;
+                font-size: 14px;
+                color: $primary-color-home-v5;
+                letter-spacing: 2px;
+                @include font-bold();
+                &:hover{
+                    span{
+                        @include rotate(360deg);
+                    }
+                }
+                span{
+                    margin-right: 10px;
+                    transition: all 1s ease;
+                }
+            }
+        }
+    }
+    .instagram{
+        margin-top: 55px;
+        h3{
+            padding-bottom: 23px;
+            font-size: 20px;
+            color: #000000;
+            @include font-bold();
+        }
+    }
+}
+/*
+    Location
+*/
+.location{
+    background: #ebebeb;
+    h3{
+        padding-bottom: 18px;
+        font-size: 20px;
+        color: $text-222;
+        @include font-bold();
+        text-transform: uppercase;
+        transition: all .3s ease;
+        &:hover{
+            color: $primary-color-home-v5;
+        }
+    }
+    p{
+        font-size: 14px;
+        color: $text-444;
+        @include font-light();
+    }
+    .box{
+        position: relative;
+        background: $text-white;
+        padding: 50px 50px 50px 110px;
+        &:before{
+            content: '';
+            width: 60px;
+            height: 100%;
+            background: $primary-color-home-v5;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        h1{
+            font-size: 36px;
+            line-height: 36px;
+            color: $text-white;
+            @include font-bold();
+            text-transform: uppercase;
+            position: absolute;
+            top: 45%;
+            left: -65px;
+            @include rotate(-90deg);
+            writing-mode: lr-tb;
+        }
+        .listq-image-fullwidth{
+            margin-bottom: 17px;
+        }
+    }
+    li{
+        margin-bottom: 30px;
+        &:last-child, &:nth-last-child(2){
+            margin-bottom: 0;
+        }
+        .box-small{
+            padding: 40px;
+            background: $text-white;
+        }
+    }
+}
+/*
+    Clients List
+*/
+.count-to-number-v3{
+    @extend .count-to-number-v2;
+    background: url('../images/index-5/bg-client-say.jpg');
+    @include background-parallax();
+    margin-top: 0;
+    li{
+        .box{
+            border-radius: 0;
+            border: 1px dashed #484848;
+            background: rgba(#636363, .2);
+            .flaticon{
+                &:before{
+                    color: $primary-color-home-v5;
+                }
+            }
+        }
+    }
+}
+/*
+    Blog
+*/
+.blog-v5{
+    @extend .blog-v4;
+    li{
+        .box{
+            .content{
+                h3{
+                    &:hover{
+                        color: $primary-color-home-v5;
+                    }
+                }
+                .categories{
+                    &:hover{
+                        color: $primary-color-home-v5;
+                    }
+                }
+                .read-more{
+                    &:hover{
+                        color: $primary-color-home-v5;
+                    }
+                }
+            }
+        }
+    }
+}

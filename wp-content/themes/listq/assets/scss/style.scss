@@ -1,0 +1,150 @@
+/*
+ * Title:   ListQ - Directory & Listing - HTML Template
+ * Author:  QTC Media
+ */
+
+/* --------------------------------------------------------
+[Table of contents]
+
+1. Google Font
+2. Reset CSS
+3. Variables
+4. Mimin
+5. Global
+6. Header
+7. Footer
+8. Home One
+9. Home Two
+10. Home Three
+11. Home Four
+12. Home Five
+13. Home Six
+14. Pricing
+15. Add Your Listing
+16. Listing Detail
+17. Blog Detail
+18. Shop
+19. Contact
+20. About
+21. 404
+
+[End table of contents]
+----------------------------------------------------------------------- */
+
+
+/*----------------------
+    Google Font
+------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
+
+/*----------------------
+    Reset CSS
+------------------------*/
+
+@import "reset";
+
+/*----------------------
+    Variables
+------------------------*/
+
+@import "variables";
+
+/*----------------------
+    Mimin
+------------------------*/
+
+@import "mimin";
+
+/*----------------------
+    Global
+------------------------*/
+
+@import "global";
+
+/*----------------------
+    Header
+------------------------*/
+
+@import "header";
+
+/*----------------------
+    Footer
+------------------------*/
+
+@import "footer";
+
+/*----------------------
+    Home V1
+------------------------*/
+
+@import "index";
+
+/*----------------------
+    Home V2
+------------------------*/
+
+@import "index-2";
+
+/*----------------------
+    Home V3
+------------------------*/
+
+@import "index-3";
+
+/*----------------------
+    Home V4
+------------------------*/
+
+@import "index-4";
+
+/*----------------------
+    Home V5
+------------------------*/
+
+@import "index-5";
+
+/*----------------------
+    Home V6
+------------------------*/
+@import "index-6";
+
+/*----------------------
+    Pricing
+------------------------*/
+@import "pricing";
+
+/*----------------------
+    Add Your Listing
+------------------------*/
+@import "add-your-listing";
+
+/*----------------------
+    Listing Detail
+------------------------*/
+@import "listing-detail";
+
+/*----------------------
+    Blog Detail
+------------------------*/
+@import "blog-detail";
+
+/*----------------------
+    Shop
+------------------------*/
+@import "shop";
+
+/*----------------------
+    Contact
+------------------------*/
+@import "contact";
+
+/*----------------------
+    About
+------------------------*/
+@import "about";
+
+/*----------------------
+    404
+------------------------*/
+@import "404";
