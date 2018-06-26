@@ -94,7 +94,7 @@
   }
 
   /*
-   * Create Listing Custom Post Type
+   * Create Listing Custom Post Type (via CPT PLugin)
    */
   function cptui_register_my_cpts_listing() {
     $labels = array(
