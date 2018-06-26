@@ -159,6 +159,7 @@
                     a{
                         height: 66px;
                         line-height: 66px;
+                        text-transform: uppercase;
                     }
                 }
             }
@@ -234,6 +235,7 @@
                     }
                     a{
                         color: $text-444;
+                        text-transform: uppercase;
                     }
                     .sub-menu{
                         border-top: 3px solid $primary-color-home-v1;

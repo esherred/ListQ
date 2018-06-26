@@ -1261,6 +1261,11 @@
             a{
                 background: $primary-color-home-v1;
                 color: $text-white;
+                &.next, &.prev {
+                    border: 1px solid $primary-color-home-v1;
+                    background: $primary-color-home-v1;
+                    color: $text-white;
+                }
             }
             .btn-arrow{
                 border: 1px solid $primary-color-home-v1;
@@ -1268,7 +1273,7 @@
                 color: $text-white;
             }
         }
-        a{
+        a, span {
             display: inline-block;
             color: #4e5453;
             @include font-bold();
@@ -1276,8 +1281,21 @@
             border-radius: 5px;
             padding: 0 10px;
             transition: all .3s ease;
+            &.current {
+                background: $primary-color-home-v1;
+                color: $text-white;
+            }
         }
         .btn-arrow{
+            padding: 0 20px;
+            border: 1px dashed $primary-color-home-v1;
+            border-radius: 5px;
+            text-transform: uppercase;
+            left: 2px;
+            color: $primary-color-home-v1;
+            transition: all .3s ease;
+        }
+        .next, .prev {
             padding: 0 20px;
             border: 1px dashed $primary-color-home-v1;
             border-radius: 5px;

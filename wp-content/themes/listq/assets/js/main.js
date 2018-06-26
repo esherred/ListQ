@@ -5,6 +5,8 @@
 
 "use strict"; // Start of use strict
 
+$ = jQuery;
+
 function stickyHeader() {
     if ($('.stricky').length) {
         var strickyScrollPos = 100;
